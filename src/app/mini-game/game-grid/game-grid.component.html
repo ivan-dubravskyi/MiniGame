@@ -1,0 +1,7 @@
+<div class="grid">
+  @for (cell of grid; let i = $index; track cell) {
+    <div [ngStyle]="{ backgroundColor: cell.color }"
+         (click)="cellClicked.emit(i)">
+    </div>
+  }
+</div>

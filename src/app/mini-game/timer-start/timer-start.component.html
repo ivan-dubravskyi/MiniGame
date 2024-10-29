@@ -1,0 +1,19 @@
+<div class="time-start">
+  <mat-form-field appearance="outline"
+                  class="form">
+    <mat-label>Time (ms)</mat-label>
+    <input #reactionTimeInput
+           matInput
+           type="number"
+           min="1"
+           [value]="reactionTime"
+           placeholder="Time (ms)">
+  </mat-form-field>
+
+  <button mat-flat-button
+          color="primary"
+          [disabled]="!reactionTimeInput.value"
+          (click)="start.emit(+reactionTimeInput.value)">
+    Start
+  </button>
+</div>

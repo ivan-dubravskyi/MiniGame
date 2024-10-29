@@ -1,0 +1,13 @@
+<mat-card class="game-container">
+  <app-timer-start [reactionTime]="reactionTime"
+                   (start)="startGame($event)">
+  </app-timer-start>
+
+  <app-score [playerScore]="playerScore"
+             [computerScore]="computerScore">
+  </app-score>
+
+  <app-game-grid [grid]="grid.cells"
+                 (cellClicked)="onCellClick($event)">
+  </app-game-grid>
+</mat-card>

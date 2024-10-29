@@ -1,0 +1,31 @@
+:host {
+  --cell-size: 40px;
+  --mobile-cell-size: 32px;
+  --columns-ammount: 10;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns-ammount), var(--cell-size));
+  gap: 5px;
+  justify-content: center;
+}
+
+.grid div {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background-color: blue;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(var(--columns-ammount), var(--mobile-cell-size));
+  }
+  .grid div {
+    width: var(--mobile-cell-size);
+    height: var(--mobile-cell-size);
+  }
+}
+
+

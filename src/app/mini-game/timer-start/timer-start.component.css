@@ -1,0 +1,10 @@
+.time-start {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  width: 100%;
+  max-width: 350px;
+  margin-right: 20px;
+}
